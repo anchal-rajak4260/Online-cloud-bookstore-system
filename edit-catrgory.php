@@ -10,26 +10,26 @@ if (isset($_SESSION['user_id']) &&
 
 
     /** 
-	  check if author 
+	  check if category 
 	  name is submitted
 	**/
-	if (isset($_POST['author_name']) &&
-        isset($_POST['author_id'])) {
+	if (isset($_POST['category_name']) &&
+        isset($_POST['category_id'])) {
 		/** 
 		Get data from POST request 
 		and store them in var
 		**/
-		$name = $_POST['author_name'];
-		$id = $_POST['author_id'];
+		$name = $_POST['category_name'];
+		$id = $_POST['category_id'];
 
 		#simple form Validation
 		if (empty($name)) {
-			$em = "The author name is required";
-			header("Location: ../edit-author.php?error=$em&id=$id");
+			$em = "The category name is required";
+			header("Location: ../edit-category.php?error=$em&id=$id");
             exit;
 		}else {
 			# UPDATE the Database
-			$sql  = "UPDATE authors 
+			$sql  = "UPDATE categories 
 			         SET name=?
 			         WHERE id=?";
 			$stmt = $conn->prepare($sql);
@@ -37,17 +37,17 @@ if (isset($_SESSION['user_id']) &&
 
 			/**
 		      If there is no error while 
-		      inserting the data
+		      updating the data
 		    **/
 		     if ($res) {
 		     	# success message
 		     	$sm = "Successfully updated!";
-				header("Location: ../edit-author.php?success=$sm&id=$id");
+				header("Location: ../edit-category.php?success=$sm&id=$id");
 	            exit;
 		     }else{
 		     	# Error message
 		     	$em = "Unknown Error Occurred!";
-				header("Location: ../edit-author.php?error=$em&id=$id");
+				header("Location: ../edit-category.php?error=$em&id=$id");
 	            exit;
 		     }
 		}
