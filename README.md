@@ -1,5 +1,5 @@
 PROJECT:- Online-cloud-bookstore-system
-![Uploading Screenshot 2024-12-01 175023.png…]()
+LOCALHOST:-    http://localhost/Online-cloud-bookstore-system/login.php
 
 <br>
 
@@ -47,5 +47,12 @@ Registered Users: In this section, the admin can view registered users.
 Admin can also update his profile, change the password and recover the password.
 
 ![Screenshot 2024-12-01 175226](https://github.com/user-attachments/assets/e146ac69-03d4-45d4-8227-35df320cb219)
+
+Folders and files 
+1. image
+2. PHP
+3. Upload
+4. cover
+5. files (pdf)
 
 ![Screenshot 2024-12-01 171621](https://github.com/user-attachments/assets/4be3b830-0e81-4da2-9ffd-f18a9c2b36f6)
